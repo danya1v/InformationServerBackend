@@ -30,6 +30,20 @@ app.get('/api/get2', (req1, res1)=> {
         res1.send(result);
     })
 }); 
+app.get('/api/get3', (req2, res2)=> {
+    const sqlSelect = 
+    'SELECT * FROM adm2';
+    db.query(sqlSelect, (err, result)=> {
+        res2.send(result);
+    })
+});
+app.get('/api/get4', (req3, res3)=> {
+    const sqlSelect = 
+    'SELECT * FROM adm3';
+    db.query(sqlSelect, (err, result)=> {
+        res3.send(result);
+    })
+});
 
 app.listen(3001, ()=> {
     console.log('runing port 3001')
