@@ -44,6 +44,13 @@ app.get('/api/get4', (req3, res3)=> {
         res3.send(result);
     })
 });
+app.get('/api/get10', (req3, res3)=> {
+    const sqlSelect = 
+    'SELECT * FROM adm10';
+    db.query(sqlSelect, (err, result)=> {
+        res3.send(result);
+    })
+});
 
 app.listen(3001, ()=> {
     console.log('runing port 3001')
